@@ -3,14 +3,15 @@
   "structure": {
     "summary": "docs/README.md"
   },
+  "output": "books",
   "plugins": ["edit-link", "prism", "-highlight", "github"],
   "pluginsConfig": {
     "edit-link": {
-      "base": "https://github.com/reactjs/redux/tree/master",
+      "base": "https://github.com/readyou/redux/tree/master",
       "label": "Edit This Page"
     },
     "github": {
-      "url": "https://github.com/reactjs/redux/"
+      "url": "https://github.com/readyou/redux/"
     }
   }
 }
