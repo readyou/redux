@@ -27,3 +27,4 @@ for tag in soup.find_all('a', {'href':any}):
 
 db.commit()
 db.close()
+

@@ -1,6 +1,5 @@
 #! /bin/bash
 
-<<<<<<< HEAD
 if [[ $1 == 'book' ]]; then
     # gitbook build
     gitbook pdf . books/redux-documentation.pdf
@@ -11,8 +10,9 @@ fi;
 if [[ $1 == 'docset' ]]; then
     rm -rf ./books
     gitbook build
+    mkdir -p ./redux.docset/Contents/Resources/Documents
+    :>./redux.docset/Contents/Resources/docSet.dsidx
     rm -rf ./redux.docset/Contents/Resources/Documents/*
-    rm redux.docset/Contents/Resources/docSet.dsidx
     # for file in 'build' 'docs' 'gitbook' 'index.html' 'PATRONS.html'; do
     #     cp -r "./books/${file}" ./redux.docset/Contents/Resources/Documents
     # done;
@@ -28,11 +28,3 @@ if [[ $1 == 'docset' ]]; then
 fi;
 
 echo 'Usage ./generate-books.sh book|docset'
-=======
-# gitbook build
-gitbook pdf . books/redux-documentation.pdf
-gitbook mobi . books/redux-documentation.mobi
-
-chmod +x ./doc2set.py
-./doc2set.py
->>>>>>> abe2b71b1517adb3cf207ae78f44c39683c5fd58
